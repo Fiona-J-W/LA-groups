@@ -88,6 +88,20 @@ class ruleset {
 		vector<tuple<object, object, object> > get_non_associative();
 
 		/**
+		 * @brief get the cyclic subgroup of an element
+		 * @param o the element
+		 * @return the cyclic subgroup of o
+		 * @throw std::invalid_argument if o is not an element of the ruleset
+		 */
+		set<object> get_cyclic_subgroup(object o);
+		
+		/**
+		 * @brief check whether the ruleset is a cyclic group
+		 * @return true if *this is a cyclic group
+		 */
+		bool is_cyclic();
+		
+		/**
 		 * @brief check whether the ruleset represents a group
 		 * @return true if it is a group, false otherwise
 		 */

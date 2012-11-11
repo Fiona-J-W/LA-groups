@@ -43,12 +43,14 @@ void fun(vector<object> vec){
 		ruleset tmp(rules);
 		if(tmp.is_group()){
 			tmp.print();
+			cout << "cyclic: " << tmp.is_cyclic() << "\n\n" << endl;
 		}
 	}
 }
 
 
 int main(){
+	cout << std::boolalpha;
 	vector<object> v;
 	fun(v);
 	return 0;

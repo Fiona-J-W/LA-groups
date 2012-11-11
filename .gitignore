@@ -5,3 +5,5 @@ bin
 /lib
 groups.kdev4
 *~
+.*
+*swp

@@ -114,6 +114,31 @@ vector<tuple<object, object, object> > ruleset::get_non_associative() {
 	return returnlst;
 }
 
+set<object> ruleset::get_cyclic_subgroup(object o){
+	if(! used_objects.count(o) ){
+		throw std::invalid_argument("object is not part of the group");
+	}
+	set<object> returnlst;
+	object tmp = o;
+	while( returnlst.insert(tmp).second ){
+		tmp = get(tmp, o);
+	}
+	return returnlst;
+}
+
+bool ruleset::is_cyclic(){
+	if( !is_group() ){
+		return false;
+	}
+	int element_count = used_objects.size();
+	for(auto o: used_objects){
+		if( get_cyclic_subgroup(o).size() == element_count ){
+			return true;
+		}
+	}
+	return false;
+}
+
 bool ruleset::is_group() {
 	if( !is_associative() ) return false;
 	try {
