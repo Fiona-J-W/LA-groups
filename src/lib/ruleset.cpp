@@ -33,7 +33,7 @@ ruleset::ruleset( const vector<rule>& rules ) {
 
 void ruleset::init( vector<rule> rules ) {
 	if( !rules.size() ) {
-		throw invalid_argument( "" );
+		throw invalid_argument( "no rules were provided" );
 	}
 	operation = rules.begin()->operation;
 	for( rule r: rules ) {

@@ -2,6 +2,6 @@ CMakeLists.txt.user
 build
 doc
 bin
-lib
+/lib
 groups.kdev4
 *~
