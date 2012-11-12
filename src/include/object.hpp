@@ -3,7 +3,9 @@
 
 #include <string>
 #include <ostream>
+#include <unordered_map>
 
+using std::unordered_map;
 using std::string;
 using std::ostream;
 
@@ -51,9 +53,24 @@ class object {
 		bool operator<( const object &other ) const;
 	private:
 		/**
-		 * @brief the name of the object
+		 * @brief the id of the object
 		 */
-		string _name;
+		int id;
+		
+		/**
+		 * @brief a hashmap that saves the names of all objects
+		 */
+		static unordered_map<int, string> name_map;
+		
+		/**
+		 * @brief a hashmap that saves the names of all objects
+		 */
+		static unordered_map<string, int> id_map;
+		
+		/**
+		 * @brief the last used id
+		 */
+		static int last_id;
 };
 
 /**

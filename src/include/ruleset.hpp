@@ -80,13 +80,19 @@ class ruleset {
 		 * @return true if it is, false otherwise
 		 */
 		bool is_associative();
-
+		
 		/**
 		 * @brief get the list of all non-associative rules
 		 * @return a vector of 3-tuples of object
 		 */
 		vector<tuple<object, object, object> > get_non_associative();
 
+		/**
+		 * @brief check whether all rules are commutative
+		 * @return true if they are, false otherwise
+		 */
+		bool is_commutative();
+		
 		/**
 		 * @brief get the cyclic subgroup of an element
 		 * @param o the element

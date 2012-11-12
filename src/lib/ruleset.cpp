@@ -114,6 +114,17 @@ vector<tuple<object, object, object> > ruleset::get_non_associative() {
 	return returnlst;
 }
 
+bool ruleset::is_commutative(){
+	for(auto i: used_objects){
+		for(auto j: used_objects){
+			if( get(i,j) != get(j,i) ){
+				return false;
+			}
+		}
+	}
+	return true;
+}
+
 set<object> ruleset::get_cyclic_subgroup(object o){
 	if(! used_objects.count(o) ){
 		throw std::invalid_argument("object is not part of the group");
@@ -130,7 +141,7 @@ bool ruleset::is_cyclic(){
 	if( !is_group() ){
 		return false;
 	}
-	int element_count = used_objects.size();
+	unsigned int element_count = used_objects.size();
 	for(auto o: used_objects){
 		if( get_cyclic_subgroup(o).size() == element_count ){
 			return true;
@@ -207,12 +218,12 @@ void ruleset::print() {
 		cout << o << " | ";
 	}
 	cout << "\n";
-	for( int i = 0; i < max_length + 1; ++i ) {
+	for( unsigned int i = 0; i < max_length + 1; ++i ) {
 		cout << "-";
 	}
 	cout << "+";
-	for( int i = 0; i < used_objects.size(); ++i ) {
-		for( int j = 0; j < max_length + 2; ++j ) {
+	for( unsigned int i = 0; i < used_objects.size(); ++i ) {
+		for( unsigned int j = 0; j < max_length + 2; ++j ) {
 			cout << "-";
 		}
 		cout << "+";
