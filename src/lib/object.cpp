@@ -5,6 +5,7 @@ using namespace std;
 
 //put the static objects here:
 int object::last_id = 0;
+//unnamed elements recieve the id -1:
 unordered_map<int, string> object::name_map = {{-1, ""}};
 unordered_map<string, int> object::id_map = {{"", -1}};
 //////////////////////////////////////////

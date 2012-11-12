@@ -25,7 +25,7 @@ struct rule {
 		 * @param operation the name of the operation
 		 */
 		rule( object val_1, object val_2, object result, string operation = "°" );
-
+		
 		/**
 		 * @brief ctor that creates a rule from a string
 		 * @param str string that descripes the rule in the format „a op b = c“
@@ -33,22 +33,27 @@ struct rule {
 		 * @param operation the name of the operation 
 		 */
 		rule( string str, string operation = "°" );
-
+		
+		/**
+		 * @brief virtual default-destructor
+		 */
+		virtual ~rule() = default;
+		
 		/**
 		 * @brief the first operand
 		 */
 		object val_1;
-
+		
 		/**
 		 * @brief the second operand
 		 */
 		object val_2;
-
+		
 		/**
 		 * @brief the result of the operation
 		 */
 		object result;
-
+		
 		/**
 		 * @brief the name of the operation
 		 */
