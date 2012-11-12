@@ -64,7 +64,7 @@ class object {
 		 * @return whether *this is in some way smaller than another object
 		 */
 		bool operator<( const object &other ) const;
-	private:
+	protected:
 		/**
 		 * @brief the id of the object
 		 */
