@@ -11,6 +11,9 @@ using std::ostream;
 
 /**
  * @brief The rule struct
+ * 
+ * This struct contains two objects, an operation and the result 
+ * of this operation if it is used on the objects.
  */
 struct rule {
 	public:

@@ -19,6 +19,7 @@ int main( int argc, char **argv ) {
 	rules.print();
 	cout << "is closed: " << rules.is_closed() << endl;
 	cout << "associative: " << rules.is_associative() << endl;
+	cout << "commutative: " << rules.is_commutative() << endl;
 	bool neutral_element = rules.has_neutral_element();
 	cout << "has neutral element: " << neutral_element << endl;
 	if( neutral_element ) {

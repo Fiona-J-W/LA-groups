@@ -11,6 +11,14 @@ using std::ostream;
 
 /**
  * @brief The object class
+ * 
+ * This class represents an object of any kind that might be a member of a set. 
+ * 
+ * Every object is clearly identified by it's name; therefore two elements with 
+ * the same name are considered equal.
+ * 
+ * The name of the object must not contain leading or trailing whitespace. It is 
+ * recommended, but not enforced, to not contain '=' or '°' either.
  */
 class object {
 	public:
