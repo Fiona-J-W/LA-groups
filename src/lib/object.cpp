@@ -10,10 +10,6 @@ unordered_map<int, string> object::name_map = {{-1, ""}};
 unordered_map<string, int> object::id_map = {{"", -1}};
 //////////////////////////////////////////
 
-object::object() {
-	
-}
-
 object::object( string name ) {
 	name = strip(name);
 	auto tmp = id_map.find(name);

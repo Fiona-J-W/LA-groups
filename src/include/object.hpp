@@ -25,7 +25,7 @@ class object {
 		/**
 		 * @brief constructs an object in an invalid state
 		 */
-		object();
+		object() = default;
 		
 		/**
 		 * @brief constructs a valid object
@@ -68,7 +68,7 @@ class object {
 		/**
 		 * @brief the id of the object
 		 */
-		int id;
+		int id = -1;
 		
 		/**
 		 * @brief a hashmap that saves the names of all objects

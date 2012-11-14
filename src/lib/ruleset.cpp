@@ -32,7 +32,7 @@ ruleset::ruleset( const vector<rule>& rules ) {
 }
 
 void ruleset::init( vector<rule> rules ) {
-	if( !rules.size() ) {
+	if( rules.empty() ) {
 		throw invalid_argument( "no rules were provided" );
 	}
 	operation = rules.begin()->operation;
