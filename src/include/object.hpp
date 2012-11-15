@@ -76,7 +76,7 @@ class object {
 		static unordered_map<int, string> name_map;
 		
 		/**
-		 * @brief a hashmap that saves the names of all objects
+		 * @brief a hashmap that saves the ids of all objects
 		 */
 		static unordered_map<string, int> id_map;
 		
